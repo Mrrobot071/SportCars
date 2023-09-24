@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLuc Car</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Estilos gerais */
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpaperaccess.com/full/156866.jpg'); /* URL da imagem de fundo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center; /* Centraliza a imagem de fundo */
+        }
+
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            padding: 10px;
+            text-align: right;
+        }
+
+        /* Estilos para o logotipo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: -50
+            top: 2%
+            right: 3%;
+}
+
+        /* Estilos para a barra de navegação */
+        nav {
+            background-color: rgba(105, 105, 105, 0);
+            text-align: right;
+            padding-right: 20px; /* Adicione um espaço à esquerda para alinhar os itens da lista */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.3s ease; /* Adiciona uma transição de 0.3 segundos na propriedade de transformação */
+        }
+
+        nav a:hover {
+            transform: scale(1.1); /* Aumenta o tamanho em 10% quando o mouse passa por cima */
+        }
+
+        /* Estilos para o conteúdo principal */
+        .content {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between; /* Distribui os elementos horizontalmente */
+        }
+
+        /* Estilos para a seção About */
+        .about {
+            position: fixed;
+            bottom: 1px; /* Ajuste essa propriedade para a posição desejada */
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 99%
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+        
+        .button { position: fixed;
+    top: 25%; /*altura do neon*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    </style>
+    
+    <style>
+        body {
+            background-color: none
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* === removing default button style ===*/
+        .button {
+            margin: 0;
+            height: auto;
+            background: transparent;
+            padding: 0;
+            border: none;
+        }
+
+/* button styling */
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #9932CC; /* Cor roxa neon */
+    --fs-size: 3em; /*tamanho do neon*/
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    text-shadow: 0 0 10px var(--animation-color), 0 0 20px var(--animation-color), 0 0 30px var(--animation-color);
+    
+}
+
+/* this is the text when you hover on the button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+    text-shadow: 0 0 10px var(--animation-color), 0 0 20px var(--animation-color), 0 0 30px var(--animation-color);
+}
+        /* hover */
+        .button:hover .hover-text {
+            width: 100%;
+            filter: drop-shadow(0 0 23px var(--animation-color));
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DevLuc</div>
+    </header>
+    
+    <div class="about">
+        <h2>About Us</h2>
+        <p>Welcome to DevLuc, your one-stop destination for high-quality auto parts and sports cars. We specialize in providing top-notch automotive components and performance vehicles to enthusiasts and professionals alike. Whether you're looking for spare parts or seeking an adrenaline rush with our selection of sports cars, we've got you covered.</p>
+    </div>
+
+    <!-- Botão flutuante para abrir o chat -->
+
+    <script>
+        // Função para carregar o script do Botpress Web Chat
+        function loadBotpressWebChat() {
+            // Verifique se o script ainda não foi carregado
+            if (!window.botpressWebChat) {
+                const script = document.createElement('script');
+                script.src = "https://cdn.botpress.cloud/webchat/v0/inject.js";
+                script.async = true;
+                script.onload = function () {
+                    // Inicialize o Botpress Web Chat após o carregamento do script
+                    window.botpressWebChat.init({
+                        // Configurações do bot
+                        "composerPlaceholder": "Chat with Jarvis",
+                        "botConversationDescription": "Jarvis-bot.com.br",
+                        "botId": "ac26bdc9-43dd-450b-9ba6-7d75cd6a61e9",
+                        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+                        "messagingUrl": "https://messaging.botpress.cloud",
+                        "clientId": "ac26bdc9-43dd-450b-9ba6-7d75cd6a61e9",
+                        "lazySocket": true,
+                        "botName": "Jarvis",
+                        "avatarUrl": "https://w7.pngwing.com/pngs/571/686/png-transparent-jarvis-logo-edwin-jarvis-iron-man-youtube-marvel-cinematic-universe-male-jarvis-ui-comics-superhero-computer-thumbnail.png",
+                        "phoneNumber": "5571992920032",
+                        "termsConditions": "Jarvis-bot.com.br",
+                        "privacyPolicy": "Jarvis-bot.com.br",
+                        "emailAddress": "lnssilvasherlock@gmail.com",
+                        "website": "Jarvis-bot.com.br",
+                        "stylesheet": " ",
+                        "frontendVersion": "v0",
+                        "useSessionStorage": true
+                    });
+                };
+                document.body.appendChild(script);
+            }
+        }
+
+        // Chame a função de carregamento do Botpress Web Chat automaticamente
+        loadBotpressWebChat();
+    </script>
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
+</body>
+
+<body> 
+    <button class="button">
+        <span class="actual-text">Dev'Luc</span>
+        <span class="hover-text">Dev'Luc</span>
+    </button>
+</body>
+</html>
