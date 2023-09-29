@@ -5,26 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LucDev Car</title>
     <style>
-        body
-min-height: 100vh;
+    /* Estilos gerais para telas grandes */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-            font-family: Arial, sans-serif;
+}
+
+/* Estilos para telas menores (usando uma media query) */
+@media screen and (max-width: 768px) {
+    /* Reduza o tamanho da fonte para telas menores */
+    body {
+        font-size: 14px;
+    }
+
+    /* Ajuste o cabeçalho para telas menores */
+    header {
+        text-align: center;
+    }
+
+    /* Faça com que o logotipo ocupe toda a largura */
+    .logo {
+        font-size: 20px;
+        margin-right: 0;
+        top: 0;
+        right: 0;
+    }
+
+    /* Faça com que a barra de navegação seja vertical */
+    nav {
+        padding-left: 0;
+    }
+
+    nav ul {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+ 
+    /* Ajuste o estilo do botão */
+    .button {
+        font-size: 16px;
+        --fs-size: 2em; /* Reduza o tamanho do neon */
+    }
+}
+
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center; /* Centraliza a imagem de fundo */
-        
-        }
 
-        .background-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-                        background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center; /* Centraliza a imagem de fundo */
-        }
+.background-container {
+    position: absolute; /* Altere de relative para absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Certifique-se de que o fundo fique atrás do conteúdo */
+}
+
         
 
         .background-image {
@@ -126,20 +173,20 @@ nav a:hover {
             justify-content: space-between; /* Distribui os elementos horizontalmente */
         }
 
-        /* Estilos para a seção About */
-        .about {
-            position: fixed;
-            bottom: 0px; /* Ajuste essa propriedade para a posição desejada */
-            left: 50%;
-    transform: translate(-50%, -0%);
-    background-color: rgba(0, 0, 0, 0.2); /* Adicione ":" após "background-color" */
+.about {
+    position: fixed; /* Altere de relative para fixed */
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
     padding: 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Certifique-se de que a largura seja 100% para cobrir toda a largura da tela */
+    width: 100%;
 }
+
         
         .button { position: relative;
     top: 25%; /*altura do neon*/
@@ -161,9 +208,9 @@ body {
 }
 
 #menu-bar {
-    width: 45px;
+    width: 40px;
     height: 40px;
-    margin: 30px 8px 20px 20px;
+    margin: 30px 0 20px 20px;
     cursor: pointer;
 }
 
