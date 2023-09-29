@@ -148,7 +148,8 @@ nav a:hover {
 }
     </style>
         <style>
-        body {
+/* Estilos gerais */
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -156,6 +157,7 @@ nav a:hover {
 
 #menu {
     position: relative;
+    width: 250px; /* Defina uma largura fixa para o menu principal */
 }
 
 #menu-bar {
@@ -173,7 +175,7 @@ nav a:hover {
     border-radius: 5px;
     transition: 0.3s ease;
 }
- 
+
 #bar1 {
     transform: translateY(-4px);
 }
@@ -193,13 +195,13 @@ nav ul {
 }
 
 nav li {
-    display: block; /* Altere "inline" para "block" para dispor verticalmente */
-    margin-bottom: 10px; /* Adicione espaço entre as opções do menu */
+    display: block;
+    margin-bottom: 10px;
 }
 
 .nav li a {
     color: white;
-    font-size: 28px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -244,10 +246,90 @@ nav li {
 }
 
 .change-bg {
-    width: 320px;
-    height: 400px;
-    transform: translate(-60%, 30%);
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
 }
+
+/* Estilo para a opção "Contatos" */
+.nav li:nth-child(5) {
+    position: relative;
+}
+  
+/* Estilo para o submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 0; /* Remova a margem superior para alinhar com "Contatos" */
+}
+
+/* Estilo para a opção "Contatos" quando o mouse passa por cima */
+.nav li:nth-child(5):hover .submenu {
+    display: block;
+}
+
+/* Estilo para a opção "Contatos" */
+.nav li:hover .submenu {
+    display: block;
+}
+
+/* Estilo para o "About" ajustado */
+.nav li:last-child {
+    margin-bottom: 60px; /* Ajuste a margem para criar espaço para as opções de contato */
+}
+
+        /* Estilo para a opção "Contatos" */
+        .nav li:nth-child(5) {
+            position: relative;
+        }
+
+        /* Estilo para o submenu */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 2;
+            margin-top: 10px;
+        }
+
+        /* Estilo para a opção "Contatos" quando o mouse passa por cima */
+        .nav li:nth-child(5):hover .submenu {
+            display: block;
+        }
+    </style>
+    <style>
+        /* Estilo para a opção "Contatos" */
+        .nav li:nth-child(5) {
+            position: relative;
+        }
+
+        /* Estilo para o submenu */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: none;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 2;
+            margin-top: 10px;
+            list-style-type: disc; /* Estilo da lista com marcadores redondos */
+        }
+
+        /* Estilo para a opção "Contatos" quando o mouse passa por cima */
+        .nav li:nth-child(5):hover .submenu {
+            display: block;
+        }
     </style>
         <style>
         body {
@@ -373,32 +455,42 @@ function toggleMenu() {
 }
 </script>
 </body>
- 
+  
 <body>
-    <div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-        </div>
-        <nav class="nav" id="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </nav>
+<div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
     </div>
-    <div class="menu-bg" id="menu-bg"></div>
-    <script>
-        function menuOnClick() {
-            document.getElementById("menu-bar").classList.toggle("change");
-            document.getElementById("nav").classList.toggle("change");
-            document.getElementById("menu-bg").classList.toggle("change-bg");
-        }
-    </script>
-    
+    <nav class="nav" id="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="https://shre.ink/2icc">Blog</a></li>
+            <li><a href="https://gleeful-bublanina-79d4c6.netlify.app/">Jarvis</a></li>
+            <li><a href="https://github.com/Mrrobot071">Projetos</a></li>
+            <li>
+                <a href="#">Contatos</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="https://wa.me/557192920032">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/071lkz/">Instagram</a></li>
+                        <li><a href="tel:5571992562710">Telefone</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="menu-bg" id="menu-bg"></div>
+
+<script>
+    function menuOnClick() {
+        document.getElementById("menu-bar").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+</script>
 </body>
 <body> 
     <button class="button">
