@@ -10,27 +10,36 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    
 }
-
-
+html, body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 /* Estilos para telas menores (usando uma media query) */
 @media screen and (max-width: 768px) {
     /* Reduza o tamanho da fonte para telas menores */
     body {
-        font-size: 14px;
-    }
-
+        font-size: 14px
+      }
+html, body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
     /* Ajuste o cabeçalho para telas menores */
     header {
-        text-align: center;
-    }
+      text-align: center;
+  }
 
     /* Faça com que o logotipo ocupe toda a largura */
     .logo {
         font-size: 20px;
-        margin-right: 0;
-        top: 0;
-        right: 0;
+        margin-right: 4%;
+        top: 2%;
     }
 
     /* Faça com que a barra de navegação seja vertical */
@@ -46,7 +55,7 @@ body {
     nav li {
         display: inline;
         margin: 0;
-        margin-bottom: 10px;
+        margin-bottom: 10px; 
     }
  
     /* Ajuste o estilo do botão */
@@ -66,6 +75,7 @@ body {
             position: fixed;
             justify-content: center;
             animation: changeBackground 30s linear infinite;
+            
         }
 
 
@@ -111,6 +121,7 @@ header {
     color: white;
     padding: 10px;
     text-align: right;
+    width: 100%;
         }
 
         /* Estilos para o logotipo */
@@ -146,7 +157,7 @@ nav a {
 }
 
 nav a:hover {
-    transform: scale(1.1);
+    transform: scale(1.0);
 }
 
 
@@ -431,8 +442,8 @@ nav li {
     </div>
 
     <div class="about">
-        <h2>About Me</h2>
-        <p>Sou bonito, sou gostoso, jogo bola e danço.</p>
+        <h2>About</h2>
+        <p>Bem-vindo ao Devluc! Aqui você encontrará o portfólio de Lucas, um entusiasta da tecnologia. Explore meus projetos, acompanhe minhas redes sociais e descubra mais dos meus trabalhos. Prepare-se para se surpreender!</p>
     </div>
 
     <!-- Botão flutuante para abrir o chat -->
