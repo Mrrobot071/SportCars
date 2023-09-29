@@ -57,10 +57,9 @@ body {
 
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center; /* Centraliza a imagem de fundo */
-
+            background-position: absolute; /* Centraliza a imagem de fundo */
 .background-container {
-    position: absolute; /* Altere de relative para absolute */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -69,7 +68,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1; /* Certifique-se de que o fundo fique atrás do conteúdo */
+    z-index: -1;
 }
 
         
@@ -115,7 +114,7 @@ body {
             font-family: Arial, sans-serif;
             background-size: cover;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: absolute;
             background-position: center; /* Centraliza a imagem de fundo */
         }
 
@@ -167,14 +166,14 @@ nav a:hover {
 
 
         /* Estilos para o conteúdo principal */
-        .content {
-            padding: 20px;
-            display: flex;
-            justify-content: space-between; /* Distribui os elementos horizontalmente */
-        }
+.content {
+    padding: 20px;
+    position: absolute;
+}
+
 
 .about {
-    position: fixed; /* Altere de relative para fixed */
+    position: fixed;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
@@ -203,7 +202,7 @@ body {
 }
 
 #menu {
-    position: relative;
+    position: absolute;
     width: 250px; /* Defina uma largura fixa para o menu principal */
 }
 
@@ -263,7 +262,7 @@ nav li {
 }
 
 .menu-bg {
-    z-index: 1;
+    z-index: 2;
     width: 0;
     height: 0;
     margin: 30px 0 20px 20px;
@@ -368,7 +367,7 @@ nav li {
             background: none;
             padding: 10px;
             border-radius: 5px;
-            z-index: 2;
+            z-index: 3;
             margin-top: 10px;
             list-style-type: disc; /* Estilo da lista com marcadores redondos */
         }
@@ -500,7 +499,7 @@ function toggleMenu() {
         menu.style.display = "block";
     }
 }
-</script>
+</script> 
 </body>
   
 <body>
@@ -512,7 +511,7 @@ function toggleMenu() {
     </div>
     <nav class="nav" id="nav">
         <ul>
-            <li><a href="/">Home</a></li>
+<li><a href="https://shimmering-frangollo-bb86a6.netlify.app/">Home</a></li>
             <li><a href="https://shre.ink/2icc">Blog</a></li>
             <li><a href="https://gleeful-bublanina-79d4c6.netlify.app/">Jarvis</a></li>
             <li><a href="https://github.com/Mrrobot071">Projetos</a></li>
