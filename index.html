@@ -12,6 +12,7 @@ body {
     padding: 0;
 }
 
+
 /* Estilos para telas menores (usando uma media query) */
 @media screen and (max-width: 768px) {
     /* Reduza o tamanho da fonte para telas menores */
@@ -38,12 +39,12 @@ body {
     }
 
     nav ul {
-        display: block;
+        display: fixed;
         margin-top: 10px;
     }
 
     nav li {
-        display: block;
+        display: inline;
         margin: 0;
         margin-bottom: 10px;
     }
@@ -54,19 +55,7 @@ body {
         --fs-size: 2em; /* Reduza o tamanho do neon */
     }
 }
-            
-
-.background-container {
-    top: 0;
-    right; 0;
-    width: 90%%;
-    height: 90%%;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: absolute; /* Centraliza a imagem de fundo */
-    z-index: -1;
-}
+ 
 
         
         .background-image {
@@ -74,7 +63,7 @@ body {
             height: 100%;
             background-size: cover;
             background-position: center;
-            position: absolute;
+            position: fixed;
             justify-content: center;
             animation: changeBackground 30s linear infinite;
         }
@@ -133,7 +122,6 @@ header {
             right: 3%;
 }
 
-        /* Estilos para a barra de navegação */
 /* Estilos para a barra de navegação */
 nav {
     background-color: transparent;
@@ -186,7 +174,7 @@ nav a:hover {
         
         .button { position: relative;
     top: 25%; /*altura do neon*/
-    left: 50%;
+    left: 51%;
     transform: translate(-50%, -50%);
 }
     </style>
@@ -296,7 +284,7 @@ nav li {
 
 /* Estilo para a opção "Contatos" */
 .nav li:nth-child(5) {
-    position: relative;
+    position: fixed;
 }
   
 /* Estilo para o submenu */
@@ -328,7 +316,7 @@ nav li {
 
         /* Estilo para a opção "Contatos" */
         .nav li:nth-child(5) {
-            position: relative;
+            position: fixed;
         }
 
         /* Estilo para o submenu */
